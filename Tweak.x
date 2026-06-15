@@ -23,7 +23,7 @@
 
 %hook NSProcessInfo
 - (NSDictionary *)environment {
-	NSMutableDictionary *env = [[%orig mutableCopy] autorelease];
+	NSMutableDictionary *env = [[%orig mutableCopy] copy];
 	[env removeObjectForKey:@"DYLD_INSERT_LIBRARIES"];
 	return env;
 }
