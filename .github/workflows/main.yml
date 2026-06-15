@@ -29,7 +29,7 @@ jobs:
         make package FINALPACKAGENAME="3DAppVersionSpoofer.deb" TARGET=iphone:clang:latest:8.0
     
     - name: Upload Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: deb-package
         path: ./packages/*.deb
